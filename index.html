@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            background-color: bisque;
+            box-sizing: border-box;
+            transition: all 0.2s linear;
+            border: none;
+            outline: none;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+        }
+
+        .container .count {
+
+            background-color: antiquewhite;
+            padding: 2.5rem;
+            border-radius: 1rem;
+
+        }
+
+        .container .count .label {
+            text-align: center;
+            font-size: 15rem;
+            font-weight: 300;
+            background-color: antiquewhite;
+            margin: 90px;
+        }
+
+        .container .count .buton {
+            text-align: center;
+            margin-top: 2rem;
+            background-color: antiquewhite;
+        }
+
+        .container .count .btn {
+            font-size: 1.5rem;
+            padding: 0.5rem 1rem;
+            margin: 0.5rem;
+            cursor: pointer;
+            background-color: teal;
+            border-radius: 1rem;
+            color: white;
+        }
+
+        .container .count .header {
+
+            background-color: antiquewhite;
+            text-align: center;
+            font-size: 5rem;
+            font-weight: 300;
+
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="container">
+        <div class="count">
+            <h1 class="header">Counter</h1>
+            <label for="" class="label" id="label" onclick="count()">0</label>
+            <div class="buton">
+
+                <button class="btn" onclick="reset()">reset</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const MyConter = document.getElementById("label")
+        function count() {
+            MyConter.innerHTML++
+        }
+        function reset() {
+            MyConter.innerHTML = 0
+        }
+    </script>
+</body>
+
+</html>
